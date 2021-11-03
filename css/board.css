@@ -1,0 +1,242 @@
+/* 모바일용 CSS */
+/* 기본 CSS */
+#wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#wrap section {
+  box-sizing: border-box;
+}
+
+/* 인포메이션 CSS */
+.info_section {
+  width: 100%;
+  background: #2ecc71;
+  border-bottom: 1px solid #39d67c;
+}
+
+.info_list {
+  display: flex;
+}
+
+.info_list li {
+  width: 25%;
+  text-align: center;
+}
+
+.info_list li a {
+  display: block;
+  padding: 15px 0;
+  padding: 0.938rem 0;
+}
+
+/* 헤더 영역 */
+.header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  width: 100%;
+  padding: 30px 0;
+  font-size: 1.188em;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #2ecc71;
+  text-shadow: 0px 1px 1px #25ab5e;
+}
+
+.nav {
+  width: 100%;
+}
+
+.gnb {
+  display: none;
+}
+
+.gnb li {
+  display: flex;
+  background: #2c3e50;
+}
+
+.gnb li a {
+  width: 80%;
+  padding: 20px 0;
+  font-size: 0.938em;
+  text-indent: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.gnb li span {
+  width: 20%;
+  text-indent: -9999px;
+  background: url("../images/s_images/sub_menu_toggle_btn.png") center center
+    no-repeat;
+  cursor: pointer;
+}
+
+.menu_toggle_btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-indent: -9999px;
+  background: url("../images/s_images/menu_toggle_btn.png") no-repeat;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  background: #474747;
+}
+
+.footer p {
+  padding: 20px;
+  font-size: 0.813em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 1px 1px #191919;
+}
+
+.board_table {
+  width: 100%;
+}
+
+.board_table caption {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.board_table thead,
+.board_table tbody {
+  font-size: 0.813em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.board_table thead {
+  color: #fff;
+  background: #2c3e50;
+}
+
+.board_table tbody,
+.board_table tbody a {
+  color: #333;
+}
+
+.board_table tbody tr:nth-child(odd) {
+  background: #f6f6f6;
+}
+
+.board_table thead tr th {
+  padding: 18px 0;
+}
+
+.board_table tbody tr td {
+  padding: 22px 0;
+}
+
+.board_table thead tr th:first-child,
+.board_table thead tr th:nth-child(3),
+.board_table thead tr th:nth-child(4),
+.board_table tbody tr td:first-child,
+.board_table tbody tr td:nth-child(3),
+.board_table tbody tr td:nth-child(4) {
+  display: none;
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+  /* 헤더영역 */
+  .header {
+    flex-direction: row;
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 15.625%;
+    padding: 0;
+  }
+
+  .logo a {
+    display: block;
+    padding: 50px 0;
+  }
+
+  .nav {
+    position: relative;
+    min-height: 80px;
+    background: #2ecc71;
+  }
+
+  .gnb {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 20;
+    width: 40.1042%;
+  }
+
+  .menu_toggle_btn {
+    top: 50%;
+    right: 30px;
+    z-index: 20;
+    margin-top: -15px;
+  }
+
+  .board_table thead tr th:first-child,
+  .board_table thead tr th:nth-child(3),
+  .board_table thead tr th:nth-child(4),
+  .board_table tbody tr td:first-child,
+  .board_table tbody tr td:nth-child(3),
+  .board_table tbody tr td:nth-child(4) {
+    display: table-cell;
+  }
+
+  .board_table thead tr th:first-child {
+    width: 10%;
+  }
+
+  .board_table thead tr th:nth-child(2) {
+    width: 65%;
+  }
+  .board_table thead tr th:nth-child(3) {
+    width: 15%;
+  }
+  .board_table thead tr th:nth-child(4) {
+    width: 10%;
+  }
+
+  .board_table tbody tr td:nth-child(2) {
+    text-align: left;
+  }
+}
+
+/* PC용 CSS */
+@media all and (min-width: 960px) {
+  /* 기본 CSS */
+  #wrap {
+    position: relative;
+    width: 90%;
+  }
+}
